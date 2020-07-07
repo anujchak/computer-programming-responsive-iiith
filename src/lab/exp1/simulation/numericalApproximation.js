@@ -282,8 +282,9 @@ window.view = {
 		var valueB1 = this.getValue('valueB');
 		var valueA2 = parseInt(valueA1);
 		var valueB2 = parseInt(valueB1);
-		if (valueA1 === '' || valueB1 === '') {
-			alert('Enter Value of a and b');
+                
+		if (valueA1 < 1 || valueB1 < 1 || valueA1 > 10 || valueB1 > 10) {
+			alert('invalid input');
 			return false;
 		}
 		else if ( isNaN(valueA1) || isNaN(valueB1)) {
